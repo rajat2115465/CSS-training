@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Position</title>
+</head>
+
+<body>
+  <style>
+    * {
+      margin: 0;
+      padding: 0px;
+      box-sizing: border-box;
+    }
+
+    body {
+      padding: 10px;
+    }
+
+    .container {
+      border: 1px solid black;
+      padding: 10px;
+    }
+
+    .container .box {
+      background-color: lightblue;
+      padding: 10px;
+      border: 1px solid black;
+      margin-bottom: 10px;
+    }
+
+    .container-1 .box-1 {
+      position: relative;
+      bottom: 25px;
+      left: 25px;
+    }
+    .container-2{
+      width: 400px;
+      height: 400px;
+    }
+    .container-2 .box{
+      width: 100px;
+      height: 100px;
+    }
+    .container-2 .box-1{
+      position: relative;
+      left:280px;
+    }
+    .container-2 .box-2{
+      position: relative;
+      top: 173px;
+    }
+    .container-2 .box-3{
+      position: relative;
+      bottom: 25%;
+    }
+    .container-3{
+      width: 50px;
+      height: 50vh;
+      position: fixed;
+      top: 0;
+      right: 0;
+    }
+    .container-4{
+      height: 400px;
+      overflow: auto;
+    }
+    .container-4 .box-1{
+      width: 100%;
+      height: 500px;
+      background-color: aqua;
+    }
+    .container-4 .box-3{
+      width: 100%;
+      height: 500px;
+      background-color:blueviolet
+    }
+    .container-4 .box-2{
+      position: sticky;
+      bottom: 0;
+    }
+  </style>
+  <!-- 
+        Task:
+        Move the box-1 to the right by 20px and top by 20px
+        The box-2 should not move from its position 
+    -->
+  <div class="container container-1">
+    <div class="box box-1">Box 1</div>
+    <div class="box box-2">Box 2</div>
+  </div>
+
+  <!-- 
+        Task:
+        Set the height of the container to 400px and width to 400px and the box width and height should be 100px
+        Move the box-1 to the top right corner of the container
+        Move the box-2 to the bottom left corner of the container
+        Move the box 3 to the center of the container and do not use absolute values to move the box-3 like px, rem, em, etc. 
+        if I make the changes into the width and height of the container, the box-3 should remain in the center of the container
+    -->
+  <div class="container container-2">
+    <div class="box box-1">Box 1</div>
+    <div class="box box-2">Box 2</div>
+    <div class="box box-3">Box 3</div>
+  </div>
+
+  <!-- 
+        Task:
+        Set the height of the box equal to the viewport half height and width to 50px
+        then, Fix the box to the top right corner of the viewport
+    -->
+  <div class="container container-3">I am a fixed box</div>
+
+  <!-- 
+        Task:
+        Set the height of the container to 400px
+        Set the height of the box-1 and box-3 to 500px and width should be full and set the different color to it
+        Make the box-2 stick to the bottom of the container boundary so when we scroll inside the box it should remain at the bottom until the below content shows up then it should scroll along with the content
+        Make sure the box 2 should not hide from the above content
+    -->
+  <div class="container container-4">
+    <div class="box box-1">Box 1</div>
+    <div class="box box-2">Box 2</div>
+    <div class="box box-3">Box 3</div>
+  </div>
+</body>
+
+</html>

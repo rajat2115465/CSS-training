@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Display Grid</title>
+</head>
+
+<body>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      padding: 10px;
+    }
+
+    .grid-container {
+      border: 1px solid black;
+      padding: 10px;
+      margin-bottom: 10px;
+      display: grid;
+      grid-template-columns: repeat(4, 25%);
+    }
+
+    .grid-container .grid-item {
+      background-color: lightblue;
+      padding: 10px;
+      border: 1px solid black;
+      margin-bottom: 10px;
+    }
+
+    .grid-container-1 {
+      border: 1px solid black;
+      margin-bottom: 10px;
+      display: grid;
+      grid-template-columns: repeat(3, 33.33%);
+    }
+
+    .grid-container-1 .grid-item {
+      background-color: tomato;
+      padding: 10px;
+      border: 1px solid black;
+    }
+
+    .item1 {
+      grid-column: span 2;
+      grid-row: span 1;
+    }
+
+    .item2 {
+      grid-column: span 1;
+      grid-row: span 2;
+    }
+
+    .item3 {
+      grid-column: span 1;
+      grid-row: span 2;
+    }
+
+    .item4 {
+      grid-column: span 1;
+      grid-row: span 1;
+    }
+
+    .item5 {
+      grid-column: span 2;
+      grid-row: span 1;
+    }
+
+    .grid-container-2 {
+      border: 1px solid black;
+      margin-bottom: 10px;
+      padding: 10px;
+      display: grid;
+      grid-template-columns: 30% 50% 20%;
+    }
+
+    .grid-container-2 .grid-item {
+      background-color: lightblue;
+      padding: 10px;
+      border: 1px solid black;
+      margin-bottom: 10px;
+    }
+  </style>
+
+  <!-- 
+        Task: Create a grid of 4 columns in each row using display grid of equal width
+    -->
+  <div class="grid-container">
+    <div class="grid-item">1</div>
+    <div class="grid-item">2</div>
+    <div class="grid-item">3</div>
+    <div class="grid-item">4</div>
+    <div class="grid-item">5</div>
+    <div class="grid-item">6</div>
+    <div class="grid-item">7</div>
+    <div class="grid-item">8</div>
+  </div>
+
+  <!-- 
+        Task: This is a grid of 3 columns in each row using display grid
+        You need make the first item to take space of 2 columns and 1 row
+        Second item should take the place of 1 column and 2 rows
+        Third item should take the place of 1 column and 2 row
+        Fourth item should take the place of 1 column and 1 row
+        Fifth item should take the place of 2 cloumns and 1 row
+    -->
+  <div class="grid-container-1">
+    <div class="grid-item item1">1</div>
+    <div class="grid-item item2">2</div>
+    <div class="grid-item item3">3</div>
+    <div class="grid-item item4">4</div>
+    <div class="grid-item item5">5</div>
+  </div>
+
+  <!-- 
+        Task: Make a grid of 3 columns in each row using display grid
+        First column should occupy the space of 30 percent of the width of the container
+        Second column should occupy the space of 50 percent of the width of the container
+        Third column should occupy the space of 20 percent of the width of the container
+    -->
+  <div class="grid-container-2">
+    <div class="grid-item">1</div>
+    <div class="grid-item">2</div>
+    <div class="grid-item">3</div>
+    <div class="grid-item">4</div>
+    <div class="grid-item">5</div>
+    <div class="grid-item">6</div>
+    <div class="grid-item">7</div>
+    <div class="grid-item">8</div>
+    <div class="grid-item">9</div>
+    <div class="grid-item">10</div>
+  </div>
+</body>
+
+</html>

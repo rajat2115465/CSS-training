@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Float</title>
+</head>
+
+<body>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      padding: 10px;
+    }
+
+    .box {
+      border: 1px solid black;
+      padding: 10px;
+      margin-bottom: 12px;
+    }
+
+    .box-1 img {
+      float: right;
+
+    }
+
+    .box-1 {
+      display: table;
+      clear: both;
+    }
+
+    .div1 {
+      background: red;
+      padding: 15px;
+    }
+
+    .div2 {
+      background: yellow;
+      padding: 15px;
+    }
+
+    .div3 {
+      padding: 15px;
+      background: green;
+    }
+
+    .div4 {
+      float: left;
+      padding: 10px;
+      border: 3px solid #73ad21;
+    }
+
+    .div5 {
+      float: left;
+      padding: 10px;
+      border: 3px solid red;
+    }
+
+
+    .box2 div {
+      float: left;
+      width: 33.33%;
+      text-align: center;
+      border: 1px solid #555;
+      background-color: #ddd;
+    }
+
+    .box::after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+  </style>
+
+  <!-- 
+      Task: Set the image on the right side of the box and the rest of the content should start from the left top 
+      of the box and should not leave any white space in them.
+      Image should remain inside the box and should not flow outside of the box
+    -->
+  <p class="box box-1">
+    <img src="https://images.pexels.com/photos/4164418/pexels-photo-4164418.jpeg?auto=compress&cs=tinysrgb&w=600"
+      alt="Pineapple" style="width: 170px; height: 170px; margin-left: 15px" />
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+    imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae
+    scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec
+    congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet.
+    Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent
+    convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis
+    dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc
+    venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida
+    venenatis. Integer fringilla congue eros non fermentum. Sed dapibus
+    pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit.
+  </p>
+
+  <!-- 
+      Task: Make the divs inside of the box to render next to each other using float 
+      and make sure the divs remains inside of the box and does not flow outside of the box 
+      Also, the divs should occupy the equal width to form a three-column layout
+    -->
+  <div class="box box2">
+    <div class="div1">Div 1</div>
+    <div class="div2">Div 2</div>
+    <div class="div3">Div 3</div>
+  </div>
+
+  <!-- 
+      Task: Right now the div4 is overlapping the div5. 
+      you need to fix this issue so the div5 shows below the div4
+    -->
+  <div class="box">
+    <div class="div4">div4</div>
+    <div class="div5">
+      div5 - Notice that div2 is after div1 in the HTML code. However, since
+      div4 floats to the left, the text in div2 flows around div1.
+    </div>
+  </div>
+</body>
+
+</html>

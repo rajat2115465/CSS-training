@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Display properties || None, block, Inline, Inline-block</title>
+  </head>
+  <body>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        padding: 10px;
+      }
+      .box {
+        background-color: lightblue;
+        margin-bottom: 10px;
+        padding: 10px;
+      }
+      .container .col {
+        background-color: lightcoral;
+        margin-bottom: 10px;
+        border: 1px solid black;
+      }
+
+      .container-2 .col {
+        background-color: teal;
+        margin-bottom: 10px;
+        padding: 10px;
+        border: 1px solid black;
+      }
+      .box-1{
+        display: none;
+      }
+      .box-2{
+        display: inline;
+      }
+     
+      .box-3{
+        display: block;
+        width: 100%;
+      }
+      .box-4{
+        display: inline-block;
+        margin-top:50px ;
+        margin-bottom: 50px;
+      }
+      .col{
+        display: inline-block;
+      }
+    </style>
+
+    <!-- Task: Modify the CSS code to set the display property for the .box-1 to hide the box -->
+    <div class="box box-1">Box 1</div>
+
+    <!-- Task: Modify the CSS code to set the display property for the .box-2 to make the box occupying only required space and add some dummy text to check the same.
+    Use this text: Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, quaerat.
+    -->
+    <div class="box box-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, quaerat.</div>
+
+    <!-- Task: Modify the CSS code to set the display property for the .box-3 to make the box occupying the entire width of the viewport -->
+    <span class="box box-3">Box 3</span>
+
+    <!-- Task: Modify the CSS code to set the display property for the .box-4 to make the box occupying only required width as per the content inside of it and give it the margin top and bottom of 50px -->
+    <div class="box box-4">Box 4</div>
+
+    <!-- Task: Modify the CSS code to set the display property for the .col to make the boxes to be displayed in a row. the boxes should align in a manner it should show one after another -->
+    <div class="container">
+      <div class="col">
+        Lorem ipsum dolor sit amet, consectetur lorem20 adipisicing elit.
+      </div>
+      <div class="col">
+        Lorem ipsum dolor sit amet consectetur lorem20 adipisicing elit.
+        Deleniti, quas.
+      </div>
+      <div class="col">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+      </div>
+    </div>
+
+    <!-- Task: Modify the CSS code to set the display property for the .col to make the boxes to be displayed in a row. if the boxes reach to the next line then make sure they do not overlap from the boxes on the top of them -->
+    <div class="container-2">
+      <div class="col">
+        Lorem ipsum dolor sit amet, consectetur lorem20 adipisicing elit.
+      </div>
+      <div class="col">
+        Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet
+        consectetur adipisicing elit. Placeat saepe voluptates ducimus molliti
+        adipisicing elit. Deleniti, quas.
+      </div>
+      <div class="col">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pseudo Classes</title>
+</head>
+
+<body>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      padding: 10px;
+    }
+
+    .container-1 {
+      background-color: #efefef;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+
+    .container-2 {
+      background-color: #efefef;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+
+    div p:first-of-type {
+      background-color: red;
+    }
+
+    .box-1 {
+      background-color: red;
+    }
+
+    .box-2 {
+      background-color: green;
+      opacity: 0;
+    }
+
+    .container-2:hover .box-1 {
+      opacity: 0;
+    }
+
+    .container-2:hover .box-2 {
+      opacity: 1;
+    }
+  </style>
+  <!-- 
+        Task: Make the every first paragraph child of the all the divs red
+    -->
+  <div class="container-1">
+    <p>This is some text.</p>
+    <p>This is some text.</p>
+
+    <div>
+      <p>This is some text.</p>
+      <p>This is some text.</p>
+      <div>
+        <p>This is some text.</p>
+        <p>This is some text.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 
+        Task: Write a CSS so that when you hover over the container-2 the box-2 should be visible and box-1 should be hidden
+        and when not hover, the box-2 should be hidden and box 1 should be shown
+        also, give color to box-1 red and box-2 green
+    -->
+  <div class="container-2">
+    <div class="box-1">Hover over me</div>
+    <div class="box-2">Hovered!</div>
+  </div>
+</body>
+
+</html>

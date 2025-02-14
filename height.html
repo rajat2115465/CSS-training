@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Width Height</title>
+  </head>
+  <body>
+    <!-- Task: Modify the CSS code to set the height, width, max-width, min-width, max-height, and min-height properties for the .box-1 and .box-2 classes.
+
+    Instructions:
+    1. Set the width of .box-1 to 500px and the height to 200px, also when the screen size is less than 500px, the box should shrink.
+    2. Set the max-width of .box-2 to 900px and the min-width to 300px. then, set the width to 75 percent of the screen width. now, when the screen size is less, the box should shrink but will not shrink below 300px.
+    3. Set the max-height of .box-3 to 75% of the viewport/screen height and the min-height to 500px. You need to use vh to achieve the same. Also use vw to set the width of the box to 90% of the screen 
+
+    Note: You cannot use the media query to achieve the same. 
+    -->
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .box {
+        
+        margin: 10px;
+        padding: 10px;
+        border: 1px solid black;
+      }
+
+      .box-1 {
+        max-width: 500px;
+        height: 200px;
+        background-color: red;
+      }
+
+      .box-2 {
+        max-width: 900px;
+        min-width: 300px;
+        width: 75vw;
+        background-color: blue;
+      }
+
+      .box-3 {
+        max-height: 75vh;
+        min-height: 500px;
+        width: 90vw;
+        background-color: green;
+      }
+    </style>
+
+    <div class="box box-1">Box 1</div>
+    <div class="box box-2">Box 2</div>
+    <div class="box box-3">Box 3</div>
+  </body>
+</html>

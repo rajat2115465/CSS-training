@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Overflow</title>
+  </head>
+  <body>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .box {
+        margin: 10px;
+        padding: 10px;
+        border: 1px solid black;
+      }
+      .box-1 {
+        background-color: red;
+        height: 200px;
+        overflow: auto;
+      }
+      .box-2 {
+        background-color: yellow;
+        height: 100px;
+        overflow: hidden;
+      }
+    </style>
+
+    <!-- 
+      Task: Give the box 1 a height of 200px maximum 
+      and the rest of the content inside the box should scroll if the content is more than the height of the box
+      if the content is less than the height 200px it should not show any scrollbar
+
+      Note: You need to duplicate the box 1 HTML one with more content and one with less content to check 
+      the height of the box is working as expected or not and scrollbar is showing as expected or not
+    -->
+    <div class="box box-1">
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere dicta
+      esse soluta. Quos numquam doloribus pariatur qui consectetur quia
+      voluptatibus corrupti consequatur magni, at nisi dignissimos, porro dolor
+      rem ullam id laboriosam minima provident repellat nam adipisci. Architecto
+      necessitatibus enim maxime voluptas iusto minima dolore eos pariatur
+      exercitationem repudiandae eveniet dolor commodi eius, sapiente eligendi
+      nihil, odio assumenda, quisquam molestias sit tenetur ab? Odio modi beatae
+      repudiandae provident. Quo cupiditate delectus facere necessitatibus
+      nostrum aspernatur soluta quos maxime, error quasi, atque iste. Dolores
+      incidunt commodi inventore minus eius et recusandae voluptatibus vitae sit
+      hic, quia velit atque, placeat voluptatem voluptate omnis distinctio
+      sapiente facere illo accusamus tempore asperiores, adipisci quasi.
+      Doloribus et earum repellendus ipsa repellat corrupti esse enim molestiae
+      animi exercitationem laborum alias, aliquam ratione aperiam dicta incidunt
+      odit nulla illum tempore placeat aspernatur deleniti iusto in. Aliquid in
+      natus blanditiis perspiciatis quod quia quo dignissimos qui dolorum quam
+      cupiditate doloremque itaque voluptatum quae porro exercitationem
+      provident sit, sunt nam necessitatibus quibusdam laborum nobis. Libero
+      magni ab, amet dolores quod, facere ad fugit in laudantium aspernatur
+      quasi, dolor veritatis quibusdam ipsa. Voluptas facilis itaque ipsam
+      recusandae pariatur sit quis, totam, numquam, dignissimos voluptatum unde
+      facere ratione exercitationem obcaecati modi at commodi earum quod quia
+      praesentium fuga. Sapiente labore consectetur ipsa nesciunt incidunt
+      reprehenderit in perferendis quae veniam nemo aspernatur facere autem ut
+      sed, harum deleniti. Unde illo esse, consequuntur, voluptatum debitis
+      officia dolore ad repellendus nesciunt at expedita blanditiis perferendis
+      praesentium atque obcaecati eius nam exercitationem maiores nisi numquam?
+      Quisquam, dicta quod iste odio aliquid deleniti nulla! Assumenda illum
+      consequuntur distinctio veniam quos, animi culpa rem quidem obcaecati
+      temporibus dignissimos inventore eius error adipisci aspernatur dolorum,
+      blanditiis est labore voluptas reprehenderit architecto! Provident,
+      officiis harum? Totam ab vero vitae, error facilis et sit necessitatibus
+      tempora nihil ipsam aliquam inventore? Hic porro at delectus suscipit
+      molestiae quis ducimus quo tempora possimus amet odio, perspiciatis
+      exercitationem perferendis ipsa architecto fugit? Optio tenetur itaque
+      cupiditate quam provident ipsa molestiae accusamus inventore aliquid
+      maiores, impedit consequatur illo, laudantium atque saepe a dicta eum
+      culpa dignissimos at recusandae sapiente. Accusantium nesciunt nihil hic
+      dolores consequatur veniam facere omnis expedita excepturi mollitia,
+      adipisci accusamus, est ipsa cumque quod asperiores blanditiis,
+      reprehenderit corrupti rem officia? Voluptatibus error voluptatum quae
+      excepturi, laudantium et? Id, reprehenderit voluptatem! Officia pariatur,
+      sequi necessitatibus consequatur ipsum voluptatem sapiente, deserunt fuga
+      quas dolorum asperiores omnis enim saepe eum veniam alias dignissimos amet
+      nostrum assumenda earum accusantium. Corrupti cupiditate nesciunt
+      dignissimos voluptatem vitae similique quod! Illo aut laboriosam error,
+      dolorum deserunt quis aperiam, quam iure beatae at, corrupti quos qui quo
+      alias! Quisquam exercitationem numquam aperiam eligendi corrupti! Velit
+      eius quis nobis soluta placeat molestiae eaque sed cum corrupti ipsa vitae
+      itaque, quibusdam exercitationem minus magnam cumque perferendis dolor
+      inventore sint et odio! Iste dolorem ut illum reprehenderit veritatis
+      incidunt aspernatur nisi fuga molestiae eveniet suscipit perspiciatis sit
+      voluptatem commodi rem vero reiciendis dolorum deserunt delectus facilis,
+      velit ratione id. Nam culpa cupiditate animi nulla iure dolorum pariatur.
+      Necessitatibus ducimus sint vel repellat.
+    </div>
+
+
+    <div class="box box-1">
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere dicta
+      esse soluta. Quos numquam doloribus pariatur qui consectetur quia
+      voluptatibus corrupti consequatur magni, at nisi dignissimos, porro dolor
+      rem ullam id laboriosam minima provident repellat nam adipisci. Architecto
+      necessitatibus enim maxime voluptas iusto minima dolore eos pariatur
+      exercitationem repudiandae eveniet dolor commodi eius, sapiente eligendi
+      
+    </div>
+    <!-- 
+      Task: Hide the extra content of the box 2 that is overflowing from the box
+    -->
+    <div class="box box-2">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati debitis
+      repellendus voluptatibus. Sunt iusto neque voluptas non rerum nam nobis
+      odit sapiente perferendis nemo, quibusdam asperiores nihil quam? Similique
+      ad praesentium nam recusandae maxime! Officiis, obcaecati modi? Eligendi
+      culpa blanditiis repellat, vitae id aspernatur minus laborum dolorum quasi
+      iusto ullam quo doloribus ducimus, itaque impedit nihil laboriosam aut
+      deleniti sapiente dicta. Voluptate facilis eum esse saepe perspiciatis
+      libero dolor nihil nemo alias delectus culpa tenetur accusantium veritatis
+      rerum blanditiis, vitae quidem nulla amet, molestias illum voluptatem
+      consequatur! Quas, dolorem perspiciatis magnam dolore aliquam suscipit
+      eligendi iure fugiat culpa dicta totam veritatis fuga odio doloremque
+      vitae atque rem quasi quam. Ad vel nihil delectus corporis repellat
+      adipisci molestiae illum, quibusdam, dolores eum architecto iusto ullam
+      quos corrupti, cupiditate officia modi odio nam eius animi. Cumque, eos.
+      Voluptate sunt ab adipisci rerum? Harum, placeat minima perferendis beatae
+      voluptates cum porro veniam corporis! Est quae odio velit libero quam
+      perferendis atque nobis quidem omnis. Ab corporis iste delectus quasi,
+      dignissimos minima eaque quis quidem fugit assumenda mollitia recusandae
+      molestias maiores laudantium voluptas. Corrupti delectus dolores dolorum
+      atque ratione error vitae iste quam modi, nostrum porro ipsa numquam
+      incidunt minima repellendus temporibus, doloremque asperiores laudantium
+      necessitatibus placeat cupiditate, possimus laborum quia? Dicta voluptatum
+      doloremque rerum ipsa non nesciunt pariatur beatae quidem fugiat ex odio
+      adipisci itaque, numquam amet animi cumque eos. Officia debitis
+      accusantium blanditiis praesentium et unde natus explicabo quos magni quae
+      numquam possimus illo fugiat amet, ut tenetur! Tempora perspiciatis
+      facilis deserunt corrupti commodi dicta blanditiis repudiandae sint
+      quaerat atque, inventore at qui, corporis facere provident. Libero quidem
+      nulla quae atque, blanditiis placeat soluta distinctio assumenda rem?
+      Quaerat vero reprehenderit, consectetur voluptates, aliquam eaque
+      provident accusamus a ipsam corporis accusantium amet enim odio nam quod,
+      voluptate laboriosam ut inventore nostrum quisquam. Ducimus sequi
+      doloremque blanditiis perspiciatis, voluptate saepe minima ipsam! Velit
+      officia, optio illum id quisquam libero explicabo rerum sunt laudantium
+      officiis sit omnis maiores quo non voluptatem. Dolorem fugit, deleniti
+      rerum earum eaque culpa laudantium enim eius dolor praesentium doloremque
+      nulla natus adipisci, unde reiciendis iusto. Doloremque molestias beatae
+      accusamus numquam ducimus, labore voluptatum, fugit iusto, libero officiis
+      provident? Saepe sunt in aliquid dolores enim alias tenetur maxime
+      necessitatibus aspernatur hic fugiat quos cum unde perspiciatis, quae
+      numquam molestiae impedit. At adipisci, tempora cupiditate nesciunt
+      tenetur soluta beatae culpa eius itaque quibusdam ratione id excepturi
+      quis distinctio earum deleniti expedita totam?
+    </div>
+  </body>
+</html>

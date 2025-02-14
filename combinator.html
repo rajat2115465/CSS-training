@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Combinators</title>
+</head>
+
+<body>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      padding: 10px;
+    }
+
+    .container-1 {
+      background-color: #efefef;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+
+    .container-2 {
+      background-color: #efefef;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+
+    .container-3 {
+      background-color: #efefef;
+      padding: 10px;
+    }
+
+    .container-3 label {
+      cursor: pointer;
+      display: block;
+      background-color: red;
+    }
+
+    .container-1>p {
+      background-color: red;
+    }
+
+    .container-1 p {
+      background-color: yellow;
+    }
+
+    .container-2 div~p {
+      background-color: red;
+    }
+
+    .container-3 label {
+      background-color: yellow;
+    }
+    .container-3 input[type="checkbox"]:checked+label {
+      background-color: red;
+    }
+  </style>
+
+  <!-- 
+        Task: In the below div add background color red to the paragraph
+        which are the direct descendant of the div and yellow to those who are not
+    -->
+  <div class="container-1">
+    <p>Paragraph 1 in the div.</p>
+    <p>Paragraph 2 in the div.</p>
+    <section>
+      <p>Paragraph 3 in the div</p>
+    </section>
+    <p>Paragraph 4 in the div.</p>
+  </div>
+
+  <!-- 
+        Task: In the below task give red background to the paragraph 
+        which are the sibling of the div element
+    -->
+  <div class="container-2">
+    <p>
+      The general sibling selector selects all elements that are next siblings
+      of a specified element.
+    </p>
+    <p>Paragraph 1.</p>
+    <div>
+      <p>Paragraph 2.</p>
+    </div>
+    <p>Paragraph 3.</p>
+    <span>Some text.</span>
+    <p>Paragraph 4.</p>
+  </div>
+
+  <!-- 
+        Task: Write the CSS code to change the background color of the label when the checkbox is checked
+        Color should be red when the checkbox is checked and yellow when it is not checked
+    -->
+  <div class="container-3">
+    <input type="checkbox" name="checkbox" id="checkbox" />
+    <label for="checkbox">Click me to change the color</label>
+  </div>
+</body>
+
+</html>
