@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSS Fixes</title>
+</head>
+
+<body>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 450px;
+      margin: 0 auto;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      border-radius: 20px;
+      padding: 20px;
+      position: relative;
+    }
+
+    .radio {
+      margin-bottom: 10px;
+    }
+
+    label {
+      border: 1px solid #ccc;
+      padding: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      display: block;
+      width: 100%;
+    }
+
+    input[type="radio"] {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      cursor: pointer;
+    }
+
+    input[type="radio"]:checked+label {
+      background-color: #007bff;
+      color: #fff;
+    }
+  </style>
+
+  <!-- 
+        Task: You need to understand the HTML first 
+        then, there is a CSS issue that you need to fix
+        that when we click on the radio button the last is being selected everytime even if we click on the first radio button
+        Fix the issue
+    -->
+  <div class="container">
+    <div class="radio">
+      <input type="radio" name="radio" id="radio-1" />
+      <label for="radio-1">Radio 1</label>
+    </div>
+    <div class="radio">
+      <input type="radio" name="radio" id="radio-2" />
+      <label for="radio-2">Radio 2</label>
+    </div>
+    <div class="radio">
+      <input type="radio" name="radio" id="radio-3" />
+      <label for="radio-3">Radio 3</label>
+    </div>
+    <div class="radio">
+      <input type="radio" name="radio" id="radio-4" />
+      <label for="radio-4">Radio 4</label>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
