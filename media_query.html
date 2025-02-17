@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Media Queries</title>
+  </head>
+  <body>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: red;
+      }
+      @media only screen and (min-width:1400px) {
+        body{
+        background-color: yellow;
+        } 
+      }
+      @media only screen and (min-width:1200px) and (max-width:1400px) {
+        body{
+        background-color: green;
+        } 
+      }
+      @media only screen and (min-width:992px) and (max-width:1200px) {
+        body{
+        background-color: blue;
+        } 
+      }
+      @media only screen and (min-width:768px) and (max-width:992px) {
+        body{
+        background-color: pink;
+        } 
+      }
+      @media only screen and (min-width:576px) and (max-width:768px) {
+        body{
+        background-color: orange;
+        } 
+      }
+      @media only screen and (min-width:400px) and (max-width:576px)  {
+        body{
+        background-color: purple;
+        } 
+      }
+      @media only screen and (max-width:400px)  {
+        body{
+        background-color: black;
+        } 
+      }
+    </style>
+    <!-- 
+        Task: Write a media query that changes the background color of the body to yellow when the screen size is greater than 1400px
+        ==> To green when greater than 1200px
+        ==> To blue when greater than 992px
+        ==> To pink when greater than 768px
+        ==> To orange when greater than 576px
+        ==> To purple when greater than 400px
+        ==> To black when less than 400px 
+    -->
+  </body>
+</html>

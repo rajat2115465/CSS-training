@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Math Function</title>
+  </head>
+  <body>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        padding: 10px;
+      }
+      .container {
+        background-color: red;
+        max-width: 800px;
+        padding: 10px;
+      }
+      .container .sidebar {
+        float: left; /* Review Point: Could have used the flex box instead. Then, defining the height of the sidebar would not have been required*/
+        background-color: lightblue;
+        width: 200px;
+        height: 200px;
+        padding: 10px;
+      }
+      .container .main-content {
+        width: calc(100%-200px);
+        padding: 10px;
+        background-color: lightgreen;
+        height: 200px;
+      }
+    </style>
+
+    <!-- 
+        Task: Here give the sidebar 200px width 
+        and the main-content should take the remaining width
+        You must use the calc() function to provide exact width to the main content
+        They should be in the same row
+    -->
+    <div class="container">
+      <div class="sidebar">This is the sidebar</div>
+      <div class="main-content">This is the main content</div>
+    </div>
+  </body>
+</html>
