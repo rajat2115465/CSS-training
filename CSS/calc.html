@@ -16,19 +16,20 @@
         padding: 10px;
       }
       .container {
+        display: flex;
         background-color: red;
         max-width: 800px;
         padding: 10px;
       }
       .container .sidebar {
-        float: left; /* Review Point: Could have used the flex box instead. Then, defining the height of the sidebar would not have been required*/
+        /* Review Point: Could have used the flex box instead. Then, defining the height of the sidebar would not have been required*/
         background-color: lightblue;
         width: 200px;
         height: 200px;
         padding: 10px;
       }
       .container .main-content {
-        width: calc(100%-200px);
+        width: calc(100% - 200px);
         padding: 10px;
         background-color: lightgreen;
         height: 200px;
