@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jquery Selector</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    .loader {
+      border: 2px solid #f3f3f3;
+      border-top: 2px solid #3498db;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      animation: spin 1s linear infinite;
+      margin: 0 auto;
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+</head>
+<!-- 
+      Task: 
+      
+      you need to create the loader UI which should be displayed when the view details button is clicked 
+      and the details are being fetched. The loader should be displayed for 2 seconds 
+      and then the details should be displayed. You can use the setTimeout function to achieve the same.
+
+      For loader UI you can take reference from https://uiverse.io/loaders
+      
+      You need to make the view details button working
+      When the view details button is clicked, the details of the
+      user should be displayed in the selected user details card
+
+      The working of the view details button should be like that
+      when it gets clicked the button should find its parent element
+      which is the card-body and then find the child elements with
+      the class name of title, designation, and joining-year and
+      then get the text of those elements and display them in the
+      selected user details card
+
+      You need to use the jQuery selector to achieve the same and
+      you need to use the classes and data attributes that are
+      already added to the elements
+
+      Using parent as a reference will help you fetch the data from
+      the correct card   
+      
+    -->
+
+<body>
+  <div class="container">
+    <div class="card my-5">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="card">
+              <div class="card-header">
+                <h4 class="mb-0">User</h4>
+              </div>
+              <div class="card-body" data-employee-id="#0001">
+                <h5>Name: <span class="title">John Doe</span></h5>
+                <p class="mb-1">
+                  Designation: <span class="designation">Web Designer</span>
+                </p>
+                <p>
+                  Joining Year:
+                  <span data-joining-year class="joining-year">2021</span>
+                </p>
+                <button class="btn btn-primary view-details">View Details</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="card">
+              <div class="card-header">
+                <h4 class="mb-0">User</h4>
+              </div>
+              <div class="card-body" data-employee-id="#0002">
+                <h5>Name: <span class="title">Martin Cooper</span></h5>
+                <p class="mb-1">
+                  Designation:
+                  <span class="designation">Software Developer</span>
+                </p>
+                <p>
+                  Joining Year:
+                  <span data-joining-year class="joining-year">2022</span>
+                </p>
+                <button class="btn btn-primary view-details">View Details</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="card">
+              <div class="card-header">
+                <h4 class="mb-0">User</h4>
+              </div>
+              <div class="card-body" data-employee-id="#0003">
+                <h5>Name: <span class="title">Robert Mikelson</span></h5>
+                <p class="mb-1">
+                  Designation: <span class="designation">Tester</span>
+                </p>
+                <p>
+                  Joining Year:
+                  <span data-joining-year class="joining-year">2019</span>
+                </p>
+                <button class="btn btn-primary view-details">View Details</button>
+              </div>
+            </div>
+          </div>
+          <div class="w-100 mb-5"></div>
+          <div class="col-lg-4 m-auto">
+            <div class="card">
+              <div class="card-header">
+                <h3 class="mb-0">Selected User Details</h3>
+              </div>
+              <div class="card-body">
+                <div class="loader" style="display:none;"></div>
+                <div class="select">
+                  <p class="mb-1">User ID: <span data-user-id>N/A</span></p>
+                  <p class="mb-1">Name: <span data-username>N/A</span></p>
+                  <p class="mb-1">
+                    Designation: <span data-designation>N/A</span>
+                  </p>
+                  <p class="mb-0">
+                    Joining Year:
+                    <span data-joining-year>N/A</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    /*
+    This function is used for display the fetch data for particular clicking on view detail button
+    */
+    $(document).ready(function () {
+      $(".view-details").on("click", function () {
+        $(".loader").show();
+        $(".select").hide();
+        setTimeout(function () {
+          var cardBody = $(this).closest(".card-body");
+          var userId = cardBody.data("employee-id");
+          var userName = cardBody.find(".title").text();
+          var designation = cardBody.find(".designation").text();
+          var joiningYear = cardBody.find(".joining-year").text();
+          $("[data-user-id]").text(userId);
+          $("[data-username]").text(userName);
+          $("[data-designation]").text(designation);
+          $("[data-joining-year]").text(joiningYear);
+          $(".loader").hide();
+          $(".select").show();
+        }.bind(this), 2000);
+      });
+    });
+  </script>
+</body>
+
+</html>

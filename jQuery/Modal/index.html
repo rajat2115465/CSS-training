@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal</title>
+    <link rel="stylesheet" href="./assert/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <!-- 
+        Task: 
+        Create a modal same as the bootstrap modal
+        -> The modal should have a header, body, and footer
+        -> The modal should have a close button on the top right corner
+        -> The modal should have a backdrop
+        -> The modal should be closed when the backdrop is clicked
+        -> The modal should be closed when the close button is clicked
+        -> There should be multiple modals on the page and all should work independently using the same code
+        -> The modal should be opened using a button
+        -> The modal should be closed using a close button added inside the footer of the modal
+        -> If the content overflows, the modal body should have a scrollbar
+        Note: You need to include the jQuery
+        Also, this exercise will require everything that you have learned in the CSS and JS learning
+    -->
+    <button class="open-modal" data-target="modal-1">Model 1</button>
+    <button class="open-modal" data-target="modal-2">Model 2</button>
+
+    <div class="modal" id="modal-1">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Modal-1</h2>
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus tempora autem excepturi, ab eum vero
+                    quod cupiditate deleniti dolores itaque totam illo facere! Facere, possimus quaerat. Dolorem error
+                    possimus distinctio.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab ad qui officiis totam assumenda eveniet
+                    modi veniam numquam accusantium ut rem illo sit distinctio ratione cum debitis, a dolor enim!
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis atque nulla deserunt.
+                    Blanditiis rerum rem, veniam voluptatibus, laborum amet reiciendis quis, quas ab eaque at.
+                    Recusandae numquam accusamus iure deserunt.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus tempora autem excepturi, ab eum
+                    vero quod cupiditate deleniti dolores itaque totam illo facere! Facere, possimus quaerat. Dolorem
+                    error possimus distinctio.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab ad qui officiis totam assumenda eveniet
+                    modi veniam numquam accusantium ut rem illo sit distinctio ratione cum debitis, a dolor enim!
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis atque nulla deserunt. Blandit
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus tempora autem excepturi, ab eum
+                    vero quod cupiditate deleniti dolores itaque totam illo facere! Facere, possimus quaerat. Dolorem
+                    error possimus distinctio.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab ad qui officiis totam assumenda eveniet
+                    modi veniam numquam accusantium ut rem illo sit distinctio ratione cum debitis, a dolor enim!
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis atque nulla deserunt.
+                    Blanditiis rerum rem, veniam voluptatibus, laborum amet reiciendis quis, quas ab eaque at.
+                    Recusandae numquam accusamus iure deserunt.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus tempora autem excepturi, ab eum
+                    vero quod cupiditate deleniti dolores itaque totam illo facere! Facere, possimus quaerat. Dolorem
+                    error possimus distinctio.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab ad qui officiis totam assumenda eveniet
+                    modi veniam numquam accusantium ut rem illo sit distinctio ratione cum debitis, a dolor enim!
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis atque nulla deserunt. Blandit
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus tempora autem excepturi, ab eum
+                    vero quod cupiditate deleniti dolores itaque totam illo facere! Facere, possimus quaerat. Dolorem
+                    error possimus distinctio.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab ad qui officiis totam assumenda eveniet
+                    modi veniam numquam accusantium ut rem illo sit distinctio ratione cum debitis, a dolor enim!
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis atque nulla deserunt.
+                    Blanditiis rerum rem, veniam voluptatibus, laborum amet reiciendis quis, quas ab eaque at.
+                    Recusandae numquam accusamus iure deserunt.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus tempora autem excepturi, ab eum
+                    vero quod cupiditate deleniti dolores itaque totam illo facere! Facere, possimus quaerat. Dolorem
+                    error possimus distinctio.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab ad qui officiis totam assumenda eveniet
+                    modi veniam numquam accusantium ut rem illo sit distinctio ratione cum debitis, a dolor enim!
+                    Lorem,ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis atque nulla deserunt. Blandit
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button class="close-footer">Close</button>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="modal-2">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Modal-2</h2>
+                <span class="close">&times;</span>
+
+            </div>
+            <div class="modal-body">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus tempora autem excepturi, ab eum vero
+                    quod cupiditate deleniti dolores itaque totam illo facere! Facere, possimus quaerat. Dolorem error
+                    possimus distinctio.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab ad qui officiis totam assumenda eveniet
+                    modi veniam numquam accusantium ut rem illo sit distinctio ratione cum debitis, a dolor enim!
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis atque nulla deserunt.
+                    Blanditiis rerum rem, veniam voluptatibus, laborum amet reiciendis quis, quas ab eaque at.
+                    Recusandae numquam accusamus iure deserunt.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus tempora autem excepturi, ab eum
+                    vero quod cupiditate deleniti dolores itaque totam illo facere! Facere, possimus quaerat. Dolorem
+                    error possimus distinctio.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab ad qui officiis totam assumenda eveniet
+                    modi veniam numquam accusantium ut rem illo sit distinctio ratione cum debitis, a dolor enim!
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis atque nulla deserunt. Blandit
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus tempora autem excepturi, ab eum
+                    vero quod cupiditate deleniti dolores itaque totam illo facere! Facere, possimus quaerat. Dolorem
+                    error possimus distinctio.
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button class="close-footer">Close</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        /**
+         *below are the function for open model by clicking on model button using same jQuery code.
+         * 1.Open modal function
+         * 2.Close modal by using top-right close icon
+         * 3.Close modal by using footer-close button
+         * 4.close modal after clicking outside of modal.
+         * */
+        $(document).ready(function () {
+            $('.open-modal').click(function () {
+                var targetModal = $(this).data('target');
+                $('#' + targetModal).fadeIn().css('display','flex');
+            });
+            $('.close').click(function () {
+                $(this).closest('.modal').fadeOut();
+            });
+            $('.close-footer').click(function () {
+                $(this).closest('.modal').fadeOut();
+            });
+            $('.modal').click(function (event) {
+                if ($(event.target).hasClass('modal')) {
+                    $(this).fadeOut();
+                }
+            });
+        });
+
+    </script>
+</body>
+
+</html>
