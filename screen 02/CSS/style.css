@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+}
+
+.box {
+    background-color: rgb(229, 229, 229);
+}
+
+.logo-name {
+    color: navy;
+}
+
+.navbar {
+    height: 70px;
+    position: sticky;
+    top: 0;
+    z-index: 1
+}
+
+.copyright {
+    color: white;
+    background-color: navy;
+    align-content: center;
+    margin: 0;
+    height: 50px;
+    padding-left: 10px;
+}
+
+.sidebar {
+    width: 300px;
+    height: 100%;
+    position: sticky;
+    top: 70px;
+    left: 0;
+    display: block;
+}
+
+.sidebar-card {
+    color: gray;
+    border-radius: 0;
+    border: none;
+}
+
+#left-arrow {
+    display: flex;
+}
+
+#right-arrow {
+    margin-right: 5px;
+    display: none;
+}
+
+.list {
+    position: relative;
+}
+
+h6.sidebar-link {
+    padding-left: 8px;
+    margin: 0;
+}
+
+.validation {
+    color: red;
+    margin: 0;
+    display: none;
+}
+
+.mandatory {
+    color: red;
+}

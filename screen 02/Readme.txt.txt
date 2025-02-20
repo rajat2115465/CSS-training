@@ -1,0 +1,1 @@
+1. Check the functionality shown in the desktop screenshots followed by their order
