@@ -1,0 +1,242 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100vh;
+}
+.left {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #021D28;
+    position: relative;
+    overflow: hidden;
+}
+
+.spinner-container {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.center-image {
+    position: absolute;
+    width: 50%;
+    height: auto;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.spinner {
+    position: absolute;
+    border-radius: 50%;
+}
+
+.spinner1 {
+    height: 100%;
+    animation: rotate 25s linear infinite;
+}
+
+.spinner2 {
+    height: 65%;
+    animation: reverseRotate 20s linear infinite;
+}
+
+.spinner3 {
+    height: 41%;
+    animation: rotate 25s linear infinite;
+}
+
+.spinner4 {
+    height: 25%;
+}
+.spin{
+    animation: reverseRotate 20s linear infinite;
+
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes reverseRotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(-360deg); }
+}
+.corner-decor {
+    position: absolute;
+    width: 300px;
+    height:300px;
+}
+
+.top-left {
+    top: -150px;
+    left: -150px;
+    animation: rotate 25s linear infinite;
+}
+
+.bottom-right {
+    bottom: -150px;
+    right: -150px;
+    animation: rotate 25s linear infinite;
+}
+
+/* Right Section */
+.right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background:  linear-gradient(180deg, rgba(255, 255, 255, 0.038) 0%, rgba(0, 67, 124, 0.72) 50%, rgba(0, 67, 124, 0.9) 100%), url('../sdg-login-bg-banner.jpg') no-repeat center center/cover;
+    color: white;
+    position: relative;
+}
+
+.header {
+    position: absolute;
+    top: 20px;
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+}
+
+.header img {
+    height: 80px;
+}
+
+.head {
+    font-size: 32px;
+    margin-top: 120px;
+}
+.main-content{
+    margin-top: 10px;
+    width: 100%;
+    overflow: auto;
+}
+.half-chakri {
+    width: 70%;
+    height: auto;
+}
+.main-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: #FFC40C;
+}
+
+/* Footer */
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    color: navy;
+    border-radius: 25px;
+    padding: 10px;
+    position: absolute;
+    bottom: 20px;
+    padding-left: 40px;
+}
+
+.circle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background-color: white;
+    border-radius: 30px;
+    position: absolute;
+    left: -20px;
+}
+@media (max-width: 1000px) {
+    .corner-decor {
+        position: absolute;
+        width: 200px;
+        height:200px;
+    }
+    
+    .top-left {
+        top: -100px;
+        left: -100px;
+        animation: rotate 25s linear infinite;
+    }
+    
+    .bottom-right {
+        bottom: -100px;
+        right: -100px;
+        animation: rotate 25s linear infinite;
+    }
+    .spinner-container {
+        height: 50vh;
+    }
+}
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        height: auto;
+    }
+    .spinner1{
+        height: 90%;
+    }
+    .spinner2{
+        height: 60%;
+    }
+    .spinner3{
+        height: 40%;
+    }
+    .spinner4{
+        height: 26%;
+    }
+
+    .corner-decor {
+        position: absolute;
+        width: 150px;
+        height:150px;
+    }
+    .main-content{
+        height: 350px;
+    }
+    .top-left {
+        top: -75px;
+        left: -75px;
+        animation: rotate 25s linear infinite;
+    }
+    
+    .bottom-right {
+        bottom: -75px;
+        right: -75px;
+        animation: rotate 25s linear infinite;
+    }
+    .right {
+        width: 100%;
+        height: auto;
+        order: 2;
+    }
+    .main-text {
+        font-size: 25px;
+        padding: 10px;
+    }
+
+    .head {
+        margin-top: 120px;
+        font-size: 24px;
+    }
+    .footer {
+        bottom: 30px;
+        padding-left: 40px;
+    }
+} 

@@ -5,18 +5,30 @@
 .box {
     background-color: rgb(229, 229, 229);
 }
-
+.right-panel{
+    display: flex;
+}
 .logo-name {
     color: navy;
 }
-
+.logo{
+    width: 40px;
+    height: 40px;
+}
 .navbar {
     height: 70px;
     position: sticky;
     top: 0;
     z-index: 1
 }
-
+.container-fluid{
+    position: relative;
+}
+.navbar-toggler{
+    position: absolute;
+    right: 20px;
+    top: 0;
+}
 .copyright {
     color: white;
     background-color: navy;
@@ -27,7 +39,7 @@
 }
 
 .sidebar {
-    width: 300px;
+    width: 280px;
     height: 100%;
     position: sticky;
     top: 70px;
@@ -67,4 +79,28 @@ h6.sidebar-link {
 
 .mandatory {
     color: red;
+}
+
+
+@media screen and (max-width: 768px) {
+    .logo-name {
+        color: navy;
+        font-size: 10px;
+    }
+    .logo{
+        width: 25px;
+        height: 25px;
+        padding-left: 2px;
+    }
+    .sidebar{
+        width: 100%;
+    }
+    
+}
+
+@media (min-width: 0px) {
+    .d-md-flex {
+        display: flex !important;
+        justify-content: flex-end;
+    }
 }
